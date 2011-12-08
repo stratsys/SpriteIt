@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- 
+  ***************************************************************************
+    Copyright (c) Microsoft Corporation. All rights reserved.
+    This code is licensed under the Visual Studio SDK license terms.
+    THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
+    ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
+    IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+    PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+  ***************************************************************************
+  -->
+  <!--This is the file that defines the actual layout and type of the commands. 
+  It is divided in different sections (e.g. command definition, command 
+  placement, ...), with each defining a specific set of properties. 
+  See the comment before each section for more details about how to 
+  use it. -->
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Extern href="msobtnid.h"/>
+
+  <!--The first section of this file is the CMDS_SECTION. This is where we define 
+  the commands, menus and menu groups. This section uses a Guid to identify the 
+  package that provides the command defined inside it. -->
+  <Commands package="guidSpriteItPkg">
+    <!--In this section we can define new menu groups. A menu group is a container for 
+    other menus or buttons (commands); from a visual point of view you can see the 
+    group as the part of a menu contained between two lines. The parent of a group 
+    must be a menu. -->
+    <Groups>
+      <!--To define a menu group we have to specify its ID, the parent menu and its display priority. 
+      In this case we use as parent menu the Context menu of the soln node in solution Explorer; 
+      its ID is defined in vsshlids.h -->
+      <Group guid="guidSpriteItGrp" id="MySolnNodeCtxGroup" priority="0x0850">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE"/>
+      </Group>
+    </Groups>
+    <!--This section defines the elements the user can interact with, like a menu command or a button  
+    or combo box in a toolbar. -->
+    <Buttons>
+      <!--An element inside this section is defined by its ID and must specify a parent group, a display  
+      priority, an image, a type, some visibility flags (optional) and a default text. -->
+      <Button guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" priority="0x100" type="Button">
+        <Parent guid="guidSpriteItGrp" id="MySolnNodeCtxGroup"/>
+        <Strings>
+          <ButtonText>Generate sprite</ButtonText>
+        </Strings>
+      </Button>      
+    </Buttons>
+  </Commands>
+  <!--This section is used when you want your command to be available when a particular UI context is active in 
+  the IDE. In this particular case the 'Traverse' command is available on the Solution node context menu only 
+  when there is an empty solution or a solution with one or more projects. You can find the available UI contexts 
+  by looking for UICONTEXT_* values in vsshell.idl and vsshell80.idl files. -->
+  <VisibilityConstraints>
+    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_EmptySolution"/>
+    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_SolutionHasMultipleProjects"/>
+    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_SolutionHasSingleProject"/>    
+  </VisibilityConstraints>
+
+  <Symbols>
+    <GuidSymbol name="guidSpriteItPkg" value="{7095D91A-8792-41b1-91B4-50A5C10D0C61}" />
+    <GuidSymbol name="guidSpriteItGrp" value="{F4FB405E-FE63-4702-95F9-41847639BEF9}" >
+      <IDSymbol name="MySolnNodeCtxGroup" value="0x1010"/>
+    </GuidSymbol>
+    <GuidSymbol name="guidSpriteItCmdSet" value="{A1917F1E-A86B-429f-87F7-1541443EC6C2}" >
+      <IDSymbol name="cmdidGenerateSprite" value="0x2001"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stratsys.SpriteIt", "Stratsys.SpriteIt\Stratsys.SpriteIt.csproj", "{400E6FF8-C920-4711-BC96-0E4E737CBC32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageOptimizationFramework", "ImageOptimizationFramework\ImageOptimizationFramework.csproj", "{9852E8B5-1B86-4AEF-85F3-60A71D8847FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stratsys.SpriteIt.Tests", "Stratsys.SpriteIt.Tests\Stratsys.SpriteIt.Tests.csproj", "{09D205A7-AE30-4617-A76A-591B70276B8C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.5.8:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Stratsys.SpriteIt\\Stratsys.SpriteIt.csproj
+		SccProjectName1 = Stratsys.SpriteIt
+		SccLocalPath1 = Stratsys.SpriteIt
+		SccProjectUniqueName2 = ImageOptimizationFramework\\ImageOptimizationFramework.csproj
+		SccProjectName2 = ImageOptimizationFramework
+		SccLocalPath2 = ImageOptimizationFramework
+		SccProjectUniqueName3 = Stratsys.SpriteIt.Tests\\Stratsys.SpriteIt.Tests.csproj
+		SccProjectName3 = Stratsys.SpriteIt.Tests
+		SccLocalPath3 = Stratsys.SpriteIt.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{400E6FF8-C920-4711-BC96-0E4E737CBC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400E6FF8-C920-4711-BC96-0E4E737CBC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400E6FF8-C920-4711-BC96-0E4E737CBC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400E6FF8-C920-4711-BC96-0E4E737CBC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9852E8B5-1B86-4AEF-85F3-60A71D8847FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9852E8B5-1B86-4AEF-85F3-60A71D8847FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9852E8B5-1B86-4AEF-85F3-60A71D8847FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9852E8B5-1B86-4AEF-85F3-60A71D8847FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D205A7-AE30-4617-A76A-591B70276B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D205A7-AE30-4617-A76A-591B70276B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D205A7-AE30-4617-A76A-591B70276B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D205A7-AE30-4617-A76A-591B70276B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
