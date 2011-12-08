@@ -8,7 +8,7 @@ namespace Microsoft.Web.Samples
 {
     public class HoverGenerator
     {
-        private readonly Regex _nameExpr = new Regex(@"\\([^\\]*)\.[^\\]*");
+        private readonly Regex _nameExpr = new Regex(@"\\([^\\]*)\.[^\\]*$");
 
         public Dictionary<string, string> Generate(List<string> imageLocations)
         {

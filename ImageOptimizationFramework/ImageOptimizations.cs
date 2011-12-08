@@ -217,10 +217,9 @@ namespace Microsoft.Web.Samples
             {
                 cssOutput.WriteLine(Indent + "&:hover");
                 cssOutput.WriteLine(Indent + "{");
-                cssOutput.WriteLine(IndentHover + "width: @width;");
-                cssOutput.WriteLine(IndentHover + "height: @height;");
-                GenerateCssBackgroundLow(IndentHover, cssOutput, fileExtension, hoverImage.Position.XOffset, hoverImage.Position.YOffset);
-                cssOutput.WriteLine(IndentHover + "background-repeat: @backgroundRepeat;");
+                string xPosition = GetOffsetPosition(hoverImage.Position.XOffset);
+                string yPosition = GetOffsetPosition(hoverImage.Position.YOffset);
+                cssOutput.WriteLine(IndentHover + "background-position: " + xPosition + "px " + yPosition + "px;");
                 cssOutput.WriteLine(Indent + "}");
             }
 
