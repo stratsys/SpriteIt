@@ -15,9 +15,9 @@
   placement, ...), with each defining a specific set of properties. 
   See the comment before each section for more details about how to 
   use it. -->
-  <Extern href="stdidcmd.h"/>
-  <Extern href="vsshlids.h"/>
-  <Extern href="msobtnid.h"/>
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
 
   <!--The first section of this file is the CMDS_SECTION. This is where we define 
   the commands, menus and menu groups. This section uses a Guid to identify the 
@@ -32,7 +32,7 @@
       In this case we use as parent menu the Context menu of the soln node in solution Explorer; 
       its ID is defined in vsshlids.h -->
       <Group guid="guidSpriteItGrp" id="MySolnNodeCtxGroup" priority="0x0850">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE"/>
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
       </Group>
     </Groups>
     <!--This section defines the elements the user can interact with, like a menu command or a button  
@@ -41,7 +41,7 @@
       <!--An element inside this section is defined by its ID and must specify a parent group, a display  
       priority, an image, a type, some visibility flags (optional) and a default text. -->
       <Button guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" priority="0x100" type="Button">
-        <Parent guid="guidSpriteItGrp" id="MySolnNodeCtxGroup"/>
+        <Parent guid="guidSpriteItGrp" id="MySolnNodeCtxGroup" />
         <Strings>
           <ButtonText>Generate sprite</ButtonText>
         </Strings>
@@ -53,18 +53,18 @@
   when there is an empty solution or a solution with one or more projects. You can find the available UI contexts 
   by looking for UICONTEXT_* values in vsshell.idl and vsshell80.idl files. -->
   <VisibilityConstraints>
-    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_EmptySolution"/>
-    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_SolutionHasMultipleProjects"/>
-    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_SolutionHasSingleProject"/>    
+    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_EmptySolution" />
+    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_SolutionHasMultipleProjects" />
+    <VisibilityItem guid="guidSpriteItCmdSet" id="cmdidGenerateSprite" context="UICONTEXT_SolutionHasSingleProject" />    
   </VisibilityConstraints>
 
   <Symbols>
     <GuidSymbol name="guidSpriteItPkg" value="{7095D91A-8792-41b1-91B4-50A5C10D0C61}" />
-    <GuidSymbol name="guidSpriteItGrp" value="{F4FB405E-FE63-4702-95F9-41847639BEF9}" >
-      <IDSymbol name="MySolnNodeCtxGroup" value="0x1010"/>
+    <GuidSymbol name="guidSpriteItGrp" value="{F4FB405E-FE63-4702-95F9-41847639BEF9}">
+      <IDSymbol name="MySolnNodeCtxGroup" value="0x1010" />
     </GuidSymbol>
-    <GuidSymbol name="guidSpriteItCmdSet" value="{A1917F1E-A86B-429f-87F7-1541443EC6C2}" >
-      <IDSymbol name="cmdidGenerateSprite" value="0x2001"/>
+    <GuidSymbol name="guidSpriteItCmdSet" value="{A1917F1E-A86B-429f-87F7-1541443EC6C2}">
+      <IDSymbol name="cmdidGenerateSprite" value="0x2001" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>
